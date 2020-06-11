@@ -13,7 +13,6 @@
     "ejs": "~2.6.1",
     "express": "^4.16.4",
     "http-errors": "~1.6.3",
-    "jQuery": "^1.7.4",
     "jsdom": "^16.2.2",
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.0",
@@ -22,9 +21,6 @@
     "uphold-sdk-node": "^2.2.3"
   },
   "devDependencies": {
-    "ajax": "0.0.4",
-    "ajax-request": "^1.2.3",
-    "axios": "^0.19.2",
     "chai": "^4.2.0",
     "mocha": "^7.2.0",
     "request": "^2.88.2"
