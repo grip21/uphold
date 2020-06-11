@@ -2,16 +2,13 @@ const express = require('express')
 const router = express.Router();
 const database = require('../databaseQueries');
 
-router.get('/', async function (req, res, next) {
-    try {
-        const transactions = await database.pool.query('SELECT * FROM transaction')
+router.get('/',  (req, res) =>{
+    const transactions =  database.pool.query('SELECT * FROM transaction',(error,result)=>{
         if (res) {
-            res.status(200).json(transactions.rows)
+            res.status(200).json(result.rows)
         }
-    }
-    catch (err) {
-        console.log(err)
-    }
+        else console.log(error)
+    })
 })
 
 module.exports = router;
