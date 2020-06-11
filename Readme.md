@@ -17,9 +17,9 @@ Uphold bot it's a node.js server that is able to move money between US dollar (U
            server match the 'database' and 'password' parameters in the Javascript file 'databaseQueries' pool configuration ('uphold' and 'f037l$')__
     ```
 #### Lets run the bot 
-  ######Start the terminal, go to the project root directory and run the command: 
+  ######Start the terminal, go to the project directory (/uphold/bin) and run the command: 
     ```
-    - $ node app.js
+    - $ node www
     
     ```
     - The bot is up and running, the collections are created and is moving money between BTC and USD according the requested algorithm.

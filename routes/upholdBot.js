@@ -98,7 +98,7 @@ async function ticker(){
             const tick = JSON.parse(body);
             tickerAsk = tick.ask; // ASK parameter from the ticker response
             tickerBid = tick.bid; // BID parameter from the ticker response
-            //tickerBid = 10500 //to test the algorithm, set the BID above 5% than the ASKing price
+            //tickerBid = 10000 //to test the algorithm, set the BID above 5% than the ASKing price
             console.log("Ticker:", tick)
         });
         //If the bot has a bitcoin in his wallet and the current bid is >= 1.05 the cost of the bitcoin purchased, there is enough profit and its sold
@@ -128,7 +128,7 @@ async function ticker(){
                 const time = await getDate(); // Returns transaction date in the format: YEAR-MONTH-DAY HOUR-MINUTE-SECOND
                 usdollarOn = false; bitcoinOn = true;
                 cost = tickerAsk;
-                await console.log("COST ASK: ",cost)
+                await console.log("Price: ",cost)
                 // Insert transaction record
                 await database.pool.query("INSERT INTO transaction (source_card, destination_card,currency,amount,date) " +
                     "VALUES( $1,$2,$3,$4,$5)", [usCardId,btcCardId,"btc",tickerAsk,time]);
@@ -139,12 +139,13 @@ async function ticker(){
                 //}
             //})
         }
+        else console.log("Not enough profit!!")
     } catch (err) {
         console.error("Could not get the BTC-USD currency rate:");
     }
 }
-setInterval(ticker,10000) // Repeat the request for the currency exchange rate BTC-USD
-
+setInterval(ticker,5000) // Repeat the request for the currency exchange rate BTC-USD
+clearInterval()
 function BTCcard(){ //Create BTC card
     console.log("Creating BTC Card")
     return new Promise((resolve, reject) => {

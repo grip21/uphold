@@ -1,4 +1,4 @@
-/*const expect  = require('chai').expect;
+const expect  = require('chai').expect;
 const request = require('request');
 const assert = require('assert');
 const chai = require('chai')
@@ -21,6 +21,7 @@ it('should GET all the clients', function (done) {
         })
 });
 
+/*
 it('resolves with ticker', async (err,res,done) => {
     const tick = await bot.ticker();
     expect(tick).to.be.an('array').lengthOf(1);
