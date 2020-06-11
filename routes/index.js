@@ -13,16 +13,13 @@ app.use(
 )
 
 /* GET the client data*/
-router.get('/', async (req, res, next) =>{
-    try {
-        const client = await database.pool.query("SELECT * FROM client");
-        if (res){
-            res.status(200).json(client.rows)
+router.get('/', (req, res) =>{
+    database.pool.query("SELECT * FROM client", (error, result) => {
+        if (result) {
+            res.status(200).json(result.rows)
         }
-    }
-    catch (err) {
-        console.log(err)
-    }
+        else console.log(error)
+    })
 });
 
 
