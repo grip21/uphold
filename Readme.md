@@ -17,7 +17,7 @@ Uphold bot it's a node.js server that is able to move money between US dollar (U
            server match the 'database' and 'password' parameters in the Javascript file 'databaseQueries' pool configuration ('uphold' and 'f037l$')__
     ```
 #### Lets run the bot 
-  ######Start the terminal, go to the project directory (/uphold/bin) and run the command: 
+  ######Start the terminal, go to the project directory /uphold/bin and run the command: 
     ```
     - $ node www
     
@@ -33,3 +33,8 @@ Uphold bot it's a node.js server that is able to move money between US dollar (U
         1. To see the bot PAT and ID -> [client] (http://localhost:3000/client)
         2. To see the info about the cards created -> [cards] (http://localhost:3000/cards)
         3. To see all the info about the transactions until the moment -> [transactions] (http://localhost:3000/transactions) 
+        
+####To run the test file in /test directory
+    1. Go to the upholdBot.js file and comment the line 16 'await createDB();'
+    2. At the terminal position yourself in /test directory and run $ npm test
+    3. Make sure you database has some data.

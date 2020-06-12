@@ -58,9 +58,7 @@ async function createDB() { //create the Database
     finally {
         console.log("Database created");
     }
-
 }
-
 
 //Buy the Bitcoin when bot is being initialized
 function buyBtc() {
@@ -100,8 +98,6 @@ async function ticker(){
             tickerBid = tick.bid; // BID parameter from the ticker response
             //tickerBid = 10000 //to test the algorithm, set the BID above 5% than the ASKing price
             console.log("Ticker:", tick)
-            return body
-
         });
         //If the bot has a bitcoin in his wallet and the current bid is >= 1.05 the cost of the bitcoin purchased, there is enough profit and its sold
         if ((tickerBid > (cost * 1.05)) && bitcoinOn) { // its created a transaction between two cards, source - Bitcoin Card and destination - USD card
@@ -149,7 +145,6 @@ async function ticker(){
 setInterval(ticker,5000) // Repeat the request for the currency exchange rate BTC-USD
 clearInterval()
 
-
 function BTCcard(){ //Create BTC card
     console.log("Creating BTC Card")
     return new Promise((resolve, reject) => {
@@ -194,4 +189,4 @@ function getDate() { // Returns the date in the format: YEAR-MONTH-DAY HOUR-MINU
     return (dateTime)
 }
 
-module.exports ={router,ticker};
+module.exports ={router};
