@@ -1,6 +1,6 @@
-##Uphold Bot
+##BTC USD Exchange Bot
 
-Uphold bot it's a node.js server that is able to move money between US dollar (USD) and Bitcoin (BTC) currencies.
+ BTC-USD bot it's a node.js server that is able to move money between US dollar (USD) and Bitcoin (BTC) currencies.
     
 ###Usage:
    - Install postgreSQL;

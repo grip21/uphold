@@ -4,7 +4,6 @@ const app = express()
 const bodyParser = require('body-parser');
 const database = require('../databaseQueries');
 
-
 app.use(bodyParser.json())
 app.use(
     bodyParser.urlencoded({

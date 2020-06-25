@@ -181,6 +181,7 @@ function USDcard() { //Create USD card
     })
 }
 
+
 function getDate() { // Returns the date in the format: YEAR-MONTH-DAY HOUR-MINUTE-SECOND
     today = new Date();
     date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();

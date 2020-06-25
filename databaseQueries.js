@@ -34,6 +34,7 @@ const createTableTransaction = 'CREATE TABLE transaction (' +
     'amount NUMERIC (12,6) NOT NULL,' +
     'date VARCHAR(255) NOT NULL);';
 
+
 module.exports = {
     dropClient,
     dropCard,
