@@ -15,7 +15,7 @@
     "http-errors": "~1.6.3",
     "jsdom": "^16.2.2",
     "morgan": "~1.9.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "pg": "^8.2.1",
     "pgtools": "^0.3.0",
     "uphold-sdk-node": "^2.2.3"
